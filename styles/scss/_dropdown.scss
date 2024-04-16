@@ -1,15 +1,59 @@
 @import "./colors";
-
 .dropdown {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   &__btn {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: $colorGrey;
+    font-weight: 300;
+    &::after {
+      width: 24px;
+      height: 24px;
+      transform: all 0.2s ease;
+      content: url("/icons/expand_more.svg");
+    }
   }
-
   &__btn-sorting {
+    color: $colorDark;
+    font-weight: bold;
   }
-
   &__content {
+    position: absolute;
+    top: 100%;
+    z-index: 5;
+    width: 100%;
+    height: 150px;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    list-style-type: none;
+    border-radius: 10px;
+    scroll-behavior: smooth;
+    transform: all 0.3s ease;
+    visibility: hidden;
+    opacity: 0;
   }
-
   &__item {
+    padding: 10px;
+    background-color: $colorLight;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    &:hover {
+      background-color: darken($colorLight, 5);
+    }
+  }
+}
+.dropdown__open {
+  .dropdown {
+    &__btn::after {
+      transform: rotate(180deg);
+    }
+    &__content {
+      visibility: visible;
+      opacity: 100;
+    }
   }
 }

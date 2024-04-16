@@ -1,0 +1,16 @@
+@import "./colors";
+.table {
+  width: 100%;
+
+  td,
+  th {
+    text-align: center;
+    padding: 10px;
+    color: inherit;
+    font: inherit;
+  }
+
+  tr {
+    border-bottom: 1px solid $colorGreyLight;
+  }
+}

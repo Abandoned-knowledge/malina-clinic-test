@@ -1,7 +1,16 @@
-@import './item';
+@import "./colors";
+@import "./item";
+@import "./pagination";
+@import "./dropdown";
+@import "./input";
+@import "./table";
+@import "./text";
 
 .wrapper {
+  min-height: 100vh;
+  background-color: #050610;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-
-
