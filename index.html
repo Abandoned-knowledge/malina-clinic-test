@@ -4,10 +4,81 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Malina Clinic Test Task</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./styles/css/main.css" />
   </head>
   <body>
-    <h1>hello world</h1>
-    <div class="block"></div>
+    <section class="wrapper">
+      <article class="item">
+        <section class="item__header">
+          <h1 class="item__title">Все пользователи</h1>
+          <section class="item__fields">
+            <input type="text" class="item__search" placeholder="Поиск" />
+            <article class="dropdown">
+              <button class="dropdown__btn">
+                sort by:
+                <span class="dropdown__btn-sorting">Имя</span>
+              </button>
+              <ul class="dropdown__content">
+                <li class="dropdown__item">item 1</li>
+                <li class="dropdown__item">item 2</li>
+                <li class="dropdown__item">item 3</li>
+                <li class="dropdown__item">item 4</li>
+                <li class="dropdown__item">item 5</li>
+              </ul>
+            </article>
+          </section>
+        </section>
+
+        <table class="item__table">
+          <thead>
+            <tr>
+              <th>id</th>
+              <th>ФИО</th>
+              <th>Возраст</th>
+              <th>Дата рождения</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+
+        <section class="item__footer">
+          <p class="item__records">
+            Показаны данные с 1 по
+            <span class="item__records-chunk">10</span> из
+            <span class="item__records-all">256</span> записей
+          </p>
+
+          <article class="pagination">
+            <button class="pagination__btn">
+              <img
+                src="./icons/navigate_before.svg"
+                alt="navigate_before"
+                class="pagination__icon"
+              />
+            </button>
+
+            <section class="pagination__pages">
+              <p class="pagination__btn pagination__page">1</p>
+            </section>
+
+            <button class="pagination__btn">
+              <img
+                src="./icons/navigate_next.svg"
+                alt="navigate_next"
+                class="pagination__icon"
+              />
+            </button>
+          </article>
+        </section>
+      </article>
+    </section>
   </body>
 </html>
