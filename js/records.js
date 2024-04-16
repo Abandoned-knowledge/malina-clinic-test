@@ -4,9 +4,9 @@ const recordChunk = records.querySelector(".item__records-chunk");
 import { fetchUsers, chunk } from "./api.js";
 
 async function showRecords() {
+    recordChunk.innerHTML = chunk;
     const users = await fetchUsers();
-    const usersCount = await users.length;
-    recordAll.innerHTML = await usersCount;
+    recordAll.innerHTML = users.length;
 }
-recordChunk.innerHTML = chunk;
+
 showRecords();
