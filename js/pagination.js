@@ -22,7 +22,6 @@ async function createPagItems() {
     createPagElement(i + 1);
   }
 }
-createPagItems();
 
 function selectPagItem(event) {
   const pages = document.querySelectorAll(".pagination__page");
@@ -34,4 +33,11 @@ function selectPagItem(event) {
   }
   selectUsersCount((value - 1) * chunk, value * chunk);
 }
+
 pagPages.addEventListener("click", selectPagItem);
+
+document.addEventListener("DOMContentLoaded", async function () {
+  await createPagItems();
+  let firstPage = document.querySelector(".pagination__page");
+  firstPage.click();
+})
