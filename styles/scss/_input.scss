@@ -1,7 +1,8 @@
 .input {
-  padding: 10px 20px;
+  padding: 0 20px;
   background-color: $colorLight;
   border: none;
+  height: 100%;
   border-radius: 10px;
   &::placeholder {
     font-family: inherit;

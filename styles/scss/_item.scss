@@ -3,11 +3,11 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
-  width: 50%;
+  width: 75%;
   padding: 40px;
   background-color: $colorWhite;
   border-radius: 20px;
-  box-shadow: 0px 0px 30px rgba($colorWhite, .3);
+  box-shadow: 0px 0px 30px rgba($colorWhite, 0.3);
   &__header {
     display: flex;
     align-items: center;
@@ -17,25 +17,29 @@
     margin: 0;
     font-size: 2rem;
   }
-  &__fields {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-  }
+
   &__input {
     position: relative;
     display: flex;
     align-items: center;
     width: 200px;
   }
+  &__fields {
+    display: flex;
+    gap: 20px;
+    height: 50px;
+  }
+
   &__search-icon {
     position: absolute;
     left: 3%;
   }
+  
   &__search {
     width: 100%;
     padding-left: 40px !important;
   }
+
   &__footer {
     display: flex;
     align-items: center;
