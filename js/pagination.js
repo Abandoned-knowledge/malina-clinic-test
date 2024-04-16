@@ -30,8 +30,8 @@ function selectPagItem(event) {
   const value = Number(target.innerHTML);
   if (target.closest(".pagination__page")) {
     target.classList.add("pagination__page_selected");
+    selectUsersCount((value - 1) * chunk, value * chunk);
   }
-  selectUsersCount((value - 1) * chunk, value * chunk);
 }
 
 pagPages.addEventListener("click", selectPagItem);
